@@ -1,5 +1,5 @@
 Package: ottrpal
-Version: 1.0
+Version: 1.0.1
 Title: Companion Tools for Open-Source Tools for Training Resources
         (OTTR)
 Description: Tools for converting Open-Source Tools for Training Resources (OTTR)
@@ -18,9 +18,9 @@ Authors@R: c(person(given = "Candace",family = "Savonen",
   )
 Depends: R (>= 3.5.0)
 License: GPL-3
-Imports: googledrive, dplyr, httr, fs, jsonlite, rmarkdown (>= 2.10),
-        xml2, rvest, readr, R.utils, bookdown, glue, curl, rprojroot,
-        magrittr, yaml, stringr, knitr (>= 1.33), qpdf, purrr
+Imports: dplyr, httr, fs, rmarkdown (>= 2.10), xml2, rvest, readr,
+        R.utils, bookdown, glue, curl, rprojroot, magrittr, yaml,
+        stringr, knitr (>= 1.33), purrr
 Suggests: remotes, testthat, tibble, utils
 Encoding: UTF-8
 ByteCompile: true
@@ -30,10 +30,10 @@ URL: https://github.com/jhudsl/ottrpal
 BugReports: https://github.com/jhudsl/ottrpal/issues
 RoxygenNote: 7.1.2
 NeedsCompilation: no
-Packaged: 2022-02-24 20:44:58 UTC; candacesavonen
+Packaged: 2022-03-03 13:28:20 UTC; candacesavonen
 Author: Candace Savonen [aut, cre] (<https://orcid.org/0000-0001-6331-7070>),
   John Muschelli [aut] (<https://orcid.org/0000-0001-6469-1750>),
   Carrie Wright [ctb]
 Maintainer: Candace Savonen <cansav09@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-02-28 19:30:02 UTC
+Date/Publication: 2022-03-03 15:00:06 UTC
