@@ -224,6 +224,16 @@ render_without_toc <- function(output_dir = file.path("docs", "no_toc"),
 
   # Find root directory by finding `_bookdown.yml` file
   root_dir <- bookdown_path()
+  
+  # Output files:
+  output_dir <- file.path(root_dir, output_dir)
+
+  ###### Check we have the files we need ######
+  # Create output folder if it does not exist
+  if (!dir.exists(output_dir)) {
+    message(paste0("Creating output folder: ", output_dir))
+    dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+  }
 
   ###### Declare all the file paths relative to root directory ######
   # Input files:
@@ -235,16 +245,6 @@ render_without_toc <- function(output_dir = file.path("docs", "no_toc"),
     )
   }
   output_yaml_file <- file.path(root_dir, output_yaml)
-
-  # Output files:
-  output_dir <- file.path(root_dir, output_dir)
-
-  ###### Check we have the files we need ######
-  # Create output folder if it does not exist
-  if (!dir.exists(output_dir)) {
-    message(paste0("Creating output folder: ", output_dir))
-    dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
-  }
 
   # Make sure we have that file
   if (!file.exists(toc_close_css)) {
@@ -295,15 +295,30 @@ render_without_toc <- function(output_dir = file.path("docs", "no_toc"),
   # Retrieve yaml file specs
   output_yaml_lines <- yaml::yaml.load_file(output_yaml_file)
 
-  # Copy over css file that's specified
+  # Copy over css file(s) that's specified
   org_css_file <- output_yaml_lines$`bookdown::gitbook`$css
-  css_file <- file.path(output_dir, org_css_file)
-
-  # Write it as "style.css"
-  fs::file_copy(org_css_file,
-    css_file,
-    overwrite = TRUE
-  )
+  
+  # Check if there are multiple .css 
+  if(length(org_css_file) > 1){
+    # Read all .css
+    css_files_read <- sapply(org_css_file, readLines)
+    
+    # Make a "mega .css" and write
+    if (verbose) {
+      message("Combining .css files")
+    }
+    css_lines_cat <- rbind(unlist(css_files_read))
+    css_file <- file.path(output_dir, org_css_file[1])
+    writeLines(css_lines_cat, css_file)
+  } else {
+    css_file <- file.path(output_dir, org_css_file)
+    
+    # Write it as "style.css"
+    fs::file_copy(org_css_file,
+                  css_file,
+                  overwrite = TRUE
+    )
+  }
 
   ###### Now do the rendering! ######
   message("Render bookdown without TOC")
@@ -312,8 +327,7 @@ render_without_toc <- function(output_dir = file.path("docs", "no_toc"),
   bookdown::render_book(
     input = "index.Rmd",
     output_yaml = output_yaml_file,
-    output_dir = output_dir,
-    clean_envir = FALSE
+    output_dir = output_dir
   )
 
   # Read in TOC closing CSS lines
