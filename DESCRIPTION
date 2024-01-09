@@ -2,7 +2,7 @@ Type: Package
 Package: ottrpal
 Title: Companion Tools for Open-Source Tools for Training Resources
         (OTTR)
-Version: 1.2
+Version: 1.2.1
 Authors@R: c(
     person("Candace", "Savonen", , c("cansav09@gmail.com","csavonen@fredhutch.org"), role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6331-7070")),
@@ -27,11 +27,11 @@ ByteCompile: true
 Encoding: UTF-8
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2023-09-20 17:28:38 UTC; candacesavonen
+Packaged: 2024-01-09 15:20:17 UTC; candacesavonen
 Author: Candace Savonen [aut, cre] (<https://orcid.org/0000-0001-6331-7070>),
   John Muschelli [aut] (<https://orcid.org/0000-0001-6469-1750>),
   Carrie Wright [ctb],
   Howard Baek [ctb]
 Maintainer: Candace Savonen <cansav09@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-09-20 20:10:02 UTC
+Date/Publication: 2024-01-09 20:00:05 UTC

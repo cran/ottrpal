@@ -1,6 +1,6 @@
-73f4ad64be0dc5069d0edb05a0f0aa13 *DESCRIPTION
+5c7e64e706d2c8ac5160ef88651d6f1a *DESCRIPTION
 fc010d32a16b2604133b22f83510e991 *NAMESPACE
-c858b16bc1a6bcf52f54d3640d81bf4d *NEWS.md
+79592d0942912589ac9c95ab757b2403 *NEWS.md
 d2c29a9238d7a65cbbf6da8629b5596d *R/aaa_utils.R
 a807c0e309ab0844325fd5584f5b5970 *R/auth.R
 305d17225520c2d8bb1c8154b4ce0abd *R/bookdown_to_leanpub.R
@@ -23,7 +23,7 @@ c88602487c32938eebdacebb793839e1 *README.md
 cfafb05acdf737ef7c1d48afbbb697c3 *build/vignette.rds
 a547c0f5213329b1b9bb505b0fd62f06 *inst/doc/getting-started.R
 b4a30d7fee5d858edb938b2fd438a208 *inst/doc/getting-started.Rmd
-bda2092c7a26a947f4107bfe07bf00af *inst/doc/getting-started.html
+822fcf3758b4c822818c906567543502 *inst/doc/getting-started.html
 854c6801d32fe8e88149c71583dc710f *inst/extdata/01-intro.Rmd
 bce68fd6a08b35c97e68aa621317bdb3 *inst/extdata/02-example-chapter.Rmd
 255d5d4c29861225b7a83bbf50ce3988 *inst/extdata/Book.txt
@@ -95,8 +95,6 @@ b9aef613c1749b2713611defdddb6f10 *man/pptx_notes.Rd
 9c22c018a89f4a666200aa07df25cfdc *man/set_up_leanpub.Rd
 52bbad6c9ad4ce74af99bf5a8351001b *man/simple_references.Rd
 63d1ebab678bfd72e2db5abbf9e4701b *man/xml_notes.Rd
-c30634bb8b926db191c8061ac50602d7 *tests/testthat.R
-b2ba55a02cab0d6bf4dc82144ea23293 *tests/testthat/test-gs_download.R
 b4a30d7fee5d858edb938b2fd438a208 *vignettes/getting-started.Rmd
 c43c775a643131eaac8d9164a1212ee2 *vignettes/manuscript/1-Introduction.md
 b866831e080bac10401d93b35b2aa14c *vignettes/manuscript/2-A-new-chapter.md
